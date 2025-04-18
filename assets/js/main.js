@@ -8,7 +8,6 @@
 
 (function() {
   "use strict";
-
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
@@ -84,6 +83,7 @@
    */
   function aosInit() {
     AOS.init({
+      offset : -400,
       duration: 600,
       easing: 'ease-in-out',
       once: true,
