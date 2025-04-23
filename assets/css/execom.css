@@ -216,9 +216,10 @@
     line-height: 1;
   }
   
-  .header .logo img {
-    max-height: 36px;
-    margin-right: 8px;
+  .sitename img
+  {
+    width: 170px;
+    height: 70px;
   }
   
   .header .logo h1 {

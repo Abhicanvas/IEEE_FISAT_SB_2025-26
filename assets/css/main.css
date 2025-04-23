@@ -228,10 +228,6 @@ h6 {
   line-height: 1;
 }
 
-.header .logo img {
-  max-height: 36px;
-  margin-right: 8px;
-}
 
 .header .logo h1 {
   font-size: 32px;
@@ -262,7 +258,11 @@ h6 {
   color: var(--contrast-color);
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
-
+.sitename img
+{
+  width: 170px;
+  height: 70px;
+}
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
