@@ -1,0 +1,10 @@
+.img-fluid {
+    max-height: 356px;
+    width: 100%;
+}
+
+.portfolio .portfolio-content .portfolio-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #e03a3c00;
+}
