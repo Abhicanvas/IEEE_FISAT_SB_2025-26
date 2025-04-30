@@ -1720,6 +1720,21 @@ section,
   bottom: 15px;
 }
 
+.team .btn{
+  display: block;
+  margin: 30px auto 0 auto;
+  border-radius: 25px;
+  padding: 10px 20px;
+  border: 0;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  
+}
+.team .btn:hover{
+color: var(--contrast-color);
+background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
