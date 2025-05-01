@@ -510,6 +510,16 @@ h6 {
     z-index: 9999;
   }
 
+  .mobile-nav-toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    cursor: pointer;
+    color: #000;
+  }
+
   .mobile-nav-active .navmenu {
     position: fixed;
     overflow: hidden;
