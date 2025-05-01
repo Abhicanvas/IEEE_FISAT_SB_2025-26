@@ -885,6 +885,7 @@ section,
   z-index: 3;
 }
 
+
 .hero h2 {
   margin: 0;
   font-size: 48px;
@@ -1114,7 +1115,14 @@ section,
   cursor: pointer;
   height: 100%;
 }
-
+.abou h2 {
+  color: var(--default-color);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
 .tabs .nav-link i {
   padding-right: 15px;
   font-size: 48px;
@@ -1165,7 +1173,7 @@ section,
 
 .tabs .tab-pane h3 {
   color: var(--heading-color);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 26px;
 }
 
