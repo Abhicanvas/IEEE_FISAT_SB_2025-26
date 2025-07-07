@@ -8,6 +8,59 @@
 
 (function() {
   "use strict";
+  const track = document.getElementById('sliderTrack');
+  const slides = track.children;
+  const pagination = document.getElementById('pagination');
+
+  let index = 0;
+  const totalSlides = slides.length;
+
+  // Clone for infinite loop effect
+  for (let i = 0; i < totalSlides; i++) {
+    const clone = slides[i].cloneNode(true);
+    track.appendChild(clone);
+  }
+
+  const dots = [];
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i));
+    pagination.appendChild(dot);
+    dots.push(dot);
+  }
+
+  function updateDots() {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index % totalSlides].classList.add('active');
+  }
+
+  function goToSlide(i) {
+    index = i;
+    track.style.transform = `translateX(-${index * slides[0].offsetWidth}px)`;
+    updateDots();
+  }
+
+  function nextSlide() {
+    index++;
+    if (index >= totalSlides * 2) {
+      index = 0;
+      track.style.transition = 'none';
+      track.style.transform = `translateX(0)`;
+      setTimeout(() => {
+        track.style.transition = 'transform 0.6s ease';
+        index++;
+        track.style.transform = `translateX(-${index * slides[0].offsetWidth}px)`;
+        updateDots();
+      }, 20);
+    } else {
+      track.style.transform = `translateX(-${index * slides[0].offsetWidth}px)`;
+      updateDots();
+    }
+  }
+
+  let interval = setInterval(nextSlide, 5000);
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */

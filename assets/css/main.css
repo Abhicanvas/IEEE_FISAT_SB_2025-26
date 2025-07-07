@@ -959,6 +959,66 @@ section,
 /*--------------------------------------------------------------
 # Clients Section
 --------------------------------------------------------------*/
+.slider-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 20px 0;
+      background: #fff;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.6s ease;
+    }
+
+    .slide {
+  flex: 0 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* optional, for consistent vertical alignment */
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 80px;  /* adjust based on your layout */
+  object-fit: contain;
+}
+
+    .slider-pagination {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      background-color: #ccc;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color: #333;
+    }
+
+    /* Responsive settings */
+    @media (max-width: 480px) {
+      .slide { width: 50%; }
+    }
+    @media (min-width: 481px) and (max-width: 640px) {
+      .slide { width: 33.333%; }
+    }
+    @media (min-width: 641px) and (max-width: 991px) {
+      .slide { width: 25%; }
+    }
+    @media (min-width: 992px) {
+      .slide { width: 16.6667%; }
+    }
 .clients .swiper-slide img {
   opacity: 1;
   transition: 0.3s;
